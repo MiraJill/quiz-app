@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geography Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6542bcec56.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #88c7dc;" class="geography">
+    <div class="globeImage">
+        <img src="img/globe.png" alt="globe">
+    </div>
+
+    <div class="geographyContent">
+        <h1>Geography Quiz</h1>
+        <h3>Test your knowledge in the different places and its environment.</h3>
+        
+        <a href="#">
+            <button class="geographyStart" onclick="openForm(quiz1)">Start</button>
+        </a>
+        
+        <a href="index.html">
+            <button class="geographyBack">Go Back</button>
+        </a>
+    </div>
+
+    <div id="overlay" class="overlay">
+        <div class="quiz-box">
+            <div  class="close-btn" onclick="closeForm()"><i class="fas fa-times-circle"></i></div>
+            <div class="question-number"> </div>
+
+            <div class="progress-bar" data-done="0">
+                <div class="progress-done"> </div>
+            </div>
+
+            <div class="question-text"> </div>
+            <div class="option-container"> 
+                <div class="option"> </div>
+                <div class="option"> </div>
+                <div class="option"> </div>
+            </div>
+            <div class="next-question-btn1">
+                <button type="button" class="btn" onclick="next(quiz1)">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay2" class="overlay2">
+        <div class="result-box">
+            <h1>You scored <span class="total-score"></span> out of 5!</h1>
+            
+            <a href="#">
+                <button class="geographyStart" onclick="closeResult(); openForm(quiz1) ">Try Again</button>
+            </a>
+            
+            <a href="index.html">
+                <button class="geographyBack">Go To Home</button>
+            </a> 
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="confetti.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6542bcec56.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body style="background-color: #d0d0d0;" class="science">
+    <div class="labImage">
+        <img src="img/lab.png" alt="microscope and particle">
+    </div>
+
+    <div class="scienceContent">
+        <h1>Science Quiz</h1>
+        <h3>Test your knowledge of science facts.</h3>
+       
+        <a href="#">
+            <button class="scienceStart" onclick="openForm(quiz2)">Start</button>
+        </a>
+
+        <a href="index.html">
+            <button class="scienceBack">Go Back</button>
+        </a>
+    </div>
+
+    <div id="overlay" class="overlay">
+        <div class="quiz-box">
+            <div  class="close-btn" onclick="closeForm()"><i class="fas fa-times-circle"></i></div>
+            <div class="question-number"> </div>
+            <div class="progress-bar">
+                <div class="progress-done">
+                
+                </div>
+            </div>
+            <div class="question-text"> </div>
+            <div class="option-container">
+                <div class="option"> </div>
+                <div class="option"> </div>
+                <div class="option"> </div>
+            </div>
+            <div class="next-question-btn2">
+                <button type="button" class="btn" onclick="next(quiz2)">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay2" class="overlay2">
+        <div class="result-box">
+            <h1>You scored <span class="total-score"></span> out of 5!</h1>
+            
+            <a href="#">
+                <button class="scienceStart" onclick="closeResult(); openForm(quiz2)">Try Again</button>
+            </a>
+            
+            <a href="index.html">
+                <button class="scienceBack">Go To Home</button>
+            </a> 
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="confetti.js"></script>
+</body>
+</html>
+
